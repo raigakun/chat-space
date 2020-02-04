@@ -46,11 +46,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|index: true, null: false, foreign_key: true|   
-|member|string|null: false, foreign_key: true|    
+|name|string|index: true, null: false|   
+ 
 
 ### Association
-- belongs_to :user
 - has_many :comments
 - has_many :groups_users
 - has_many :users through: :groups_users
