@@ -1,0 +1,36 @@
+.main-chat 
+  .main-chat__group-info
+    .main-chat__group-info__left-box
+      %h2.main-chat__group-info__left-box__group-name
+        groupname
+      %ul.main-chat__group-info__left-box__member-list
+        member :
+        %li.main-chat__group-info__left-box__member-list__member-name
+          masa
+    = link_to "#", class: "main-chat__group-info__edit-btn" do
+      Edit
+
+  .main-chat__message-list
+    .main-chat__message-list__group
+      .main-chat__message-list__group__user-name
+        masa
+      .main-chat__message-list__group__user-name__time
+        2020/02/06(Thu) 16:20:20
+    .main-chat__message-list__message
+      あああ
+    .main-chat__message-list__group
+      .main-chat__message-list__group__user-name
+        masa2
+      .main-chat__message-list__group__user-name__time
+        2020/02/06(Thu) 16:20:22
+    .main-chat__message-list__message
+      あああ2
+
+  .main-chat__message-form
+    .main-chat__message-form__all
+      .main-chat__message-form__all__post
+        %input{placeholder: "type a message", class: "main-chat__message-form__all__post__message"}
+        %label{class: "main-chat__message-form__all__post__image"} 
+          = icon('fas', 'image', class: "main-chat__message-form__all__post__image__icon")
+          %input{type: "file", class: "main-chat__message-form__all__post__image__file"}
+      %input.main-chat__message-form__all__submit{type: 'submit', value: 'Send'}
