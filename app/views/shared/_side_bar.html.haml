@@ -1,0 +1,23 @@
+.side-bar 
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      %h3.side-bar__user-name__top-items__name 
+        masa
+      %ul.side-bar__user-name__top-items__icons
+        %li.side-bar__user-name__top-items__icons__icon
+        = link_to "#", class: "side-bar__btn side-bar__btn--edit" do 
+          = icon('far', 'edit', class: "side-bar__btn--icon", style: "color: #ffffff")
+        %li.side-bar__user-name__top-items__icons__icon
+        = link_to "#", class: "side-bar__btn side-bar__btn--cog" do
+          = icon('fas', 'cog', class: "side-bar__btn--icon", style: "color: #ffffff")
+
+  .side-bar__group-list
+    .side-bar__group-list__group
+      %h3.side-bar__group-list__group__name
+        tech::expert
+      %h3.side-bar__group-list__group__message
+        あああ
+      %h3.side-bar__group-list__group__name
+        tech::expert2
+      %h3.side-bar__group-list__group__message
+        あああ2
