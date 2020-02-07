@@ -2,13 +2,13 @@
   .side-bar__user-name
     .side-bar__user-name__top-items
       %h3.side-bar__user-name__top-items__name 
-        masa
+        = current_user.name
       %ul.side-bar__user-name__top-items__icons
         %li.side-bar__user-name__top-items__icons__icon
         = link_to "#", class: "side-bar__btn side-bar__btn--edit" do 
           = icon('far', 'edit', class: "side-bar__btn--icon", style: "color: #ffffff")
         %li.side-bar__user-name__top-items__icons__icon
-        = link_to "#", class: "side-bar__btn side-bar__btn--cog" do
+        = link_to edit_user_path(current_user), class: "side-bar__btn side-bar__btn--cog" do
           = icon('fas', 'cog', class: "side-bar__btn--icon", style: "color: #ffffff")
 
   .side-bar__group-list
