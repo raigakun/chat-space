@@ -37,7 +37,7 @@ Things you may want to cover:
 |password|string|null: false|
 
 ### Association
-- has_many :comments
+- has_many :messages
 - has_many :groups_users
 - has_many :groups through: :groups_users
 
@@ -50,7 +50,7 @@ Things you may want to cover:
  
 
 ### Association
-- has_many :comments
+- has_many :messages
 - has_many :groups_users
 - has_many :users through: :groups_users
 
@@ -67,12 +67,12 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## commentsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|body|text||
+|content|text||
 |image|text||
 
 ### Association
