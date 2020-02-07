@@ -5,19 +5,17 @@
         = current_user.name
       %ul.side-bar__user-name__top-items__icons
         %li.side-bar__user-name__top-items__icons__icon
-        = link_to "#", class: "side-bar__btn side-bar__btn--edit" do 
+        = link_to new_group_path, class: "side-bar__btn side-bar__btn--edit" do 
           = icon('far', 'edit', class: "side-bar__btn--icon", style: "color: #ffffff")
         %li.side-bar__user-name__top-items__icons__icon
         = link_to edit_user_path(current_user), class: "side-bar__btn side-bar__btn--cog" do
           = icon('fas', 'cog', class: "side-bar__btn--icon", style: "color: #ffffff")
 
   .side-bar__group-list
+    - current_user.groups.each do |group|
     .side-bar__group-list__group
-      %h3.side-bar__group-list__group__name
-        tech::expert
-      %h3.side-bar__group-list__group__message
-        あああ
-      %h3.side-bar__group-list__group__name
-        tech::expert2
-      %h3.side-bar__group-list__group__message
-        あああ2
+      = link_to '#' 
+        .side-bar__group-list__group__name
+          = group.name
+        .side-bar__group-list__group__message
+          メッセージはまだありません。
