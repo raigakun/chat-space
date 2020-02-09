@@ -26,11 +26,23 @@
     .main-chat__message-list__message
       あああ2
 
-  .main-chat__message-form
-    .main-chat__message-form__all
-      .main-chat__message-form__all__post
-        %input{placeholder: "type a message", class: "main-chat__message-form__all__post__message"}
-        %label{class: "main-chat__message-form__all__post__image"} 
-          = icon('fas', 'image', class: "main-chat__message-form__all__post__image__icon")
-          %input{type: "file", class: "main-chat__message-form__all__post__image__file"}
-      %input.main-chat__message-form__all__submit{type: 'submit', value: 'Send'}
+
+
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+  -# .main-chat__message-form
+  -#   .main-chat__message-form__all
+  -#     .main-chat__message-form__all__post
+  -#       = form_for [@group, @message] do |f|
+  -#       %input{placeholder: "type a message", class: "main-chat__message-form__all__post__message"}
+  -#       %label{class: "main-chat__message-form__all__post__image"} 
+  -#         = icon('fas', 'image', class: "main-chat__message-form__all__post__image__icon")
+  -#         %input{type: "file", class: "main-chat__message-form__all__post__image__file"}
+  -#     %input.main-chat__message-form__all__submit{type: 'submit', value: 'Send'}

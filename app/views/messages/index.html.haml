@@ -1,4 +1,28 @@
-.wrapper 
-  = render "shared/side_bar"
-  = render "shared/main_chat"
- 
+.chat
+  
+  = render 'shared/chat-side'
+  
+  .contents
+    .contents__member
+      .contents__member_current-group
+        .group-name
+          = @group.name
+          .member-name
+            member :
+            - @group.users.each do |group_user|
+              = group_user.name
+      .contents__member__edit-button
+        = link_to "Edit", edit_group_path(params[:group_id]),class: "EDITlink"
+
+          
+    .contents__main
+      .messages
+        = render @messages
+    .contents__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'contents__form__message', placeholder: 'type a message'
+        .contents__form__mask
+          = f.label :image, class: 'contents__form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'contents__form__submit'
