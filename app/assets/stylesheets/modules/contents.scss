@@ -99,17 +99,19 @@ body{
       float:left;
       height: 50px;
       padding: 0 10px;
-      width: calc(100% - 150px);
+      width: calc(100% - 110px);
+      position: relative;
      }
      &__mask {
       background-color: $white;
       float:left;
       height: 50px;
-      padding-right: 10px;
       &__image {
         font-size: 20px;
         line-height: 50px;
         cursor: pointer;
+        position: absolute;
+        right: 170px;
       }
       .hidden {
         display: none;
