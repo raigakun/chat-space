@@ -4,13 +4,13 @@
   
   .contents
     .contents__member
-      .contents__member_current-group
+      .contents__member__current-group
         .group-name
           = @group.name
-          .member-name
-            member :
-            - @group.users.each do |group_user|
-              = group_user.name
+        .member-name
+          member :
+          - @group.users.each do |group_user|
+            = group_user.name
       .contents__member__edit-button
         = link_to "Edit", edit_group_path(params[:group_id]),class: "EDITlink"
 
