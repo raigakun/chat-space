@@ -4,17 +4,17 @@ body{
 .chat{
   display: flex;
 
-  @mixin contents_width{
-    box-sizing: border-box; 
-    padding: 0 40px;
-  }
+  // @mixin contents_width{
+  //   box-sizing: border-box; 
+  //   padding: 0 40px;
+  // }
 
   .contents{
-    background-color: #fafafa;
+    background-color: $white;
     width: calc(100% - 300px);
     &__member{
       height: 100px;
-      background-color: white;
+      background-color: $white;
       border-bottom: solid 1px #eee;
       @include contents_width;
       &__current-group{
@@ -28,21 +28,22 @@ body{
         .member-name{
           padding-top: 20px;
           font-size: 12px;
-          color: #999999;
+          color: $light_gray;
         }
       }
       &__edit-button{  
         height: 40px;
         margin-top: 30px;
-        color: #38AEF0;
+        color: $light_blue;
         line-height: 40px;
         padding: 0 20px;
         right: 50px;
-        border: 1px solid #38AEF0;
+        border: 1px solid $light_blue;
         position: absolute;
         cursor: pointer;
         .EDITlink {
           text-decoration: none;
+          color: $light_blue;
         }
       }   
     }
@@ -58,11 +59,11 @@ body{
           padding-bottom: 10px;
           .upper__name{
             font-weight: bold;
-            color: #434A54;
+            color: $black;
             font-size: 16px;
           }
           .upper__date{
-            color: #999999;
+            color: $light_gray;
             font-size: 12px;
             padding-left: 10px;
           }
@@ -70,7 +71,7 @@ body{
         .message__text{
           height: 14px;
           font-size: 14px;
-          color: #434A54;
+          color: $black;
           margin-top: 10px;
         }
       }

@@ -1,7 +1,12 @@
-@mixin clearfix {
-  &:after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-} 
+// @mixin clearfix {
+//   &:after {
+//     content: "";
+//     clear: both;
+//     display: block;
+//   }
+// } 
+
+@mixin contents_width{
+  box-sizing: border-box; 
+  padding: 0 40px;
+}
