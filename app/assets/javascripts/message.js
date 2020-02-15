@@ -56,8 +56,8 @@ $(function(){
         })
         .done(function(data){
           var html = buildHTML(data);
-          $('.contents__main').append(html)
-          $('.contents__main').animate({ scrollTop: $('.contents__main')[0].scrollHeight})
+          $('.contents__main').append(html);
+          $('.contents__main').animate({ scrollTop: $('.contents__main')[0].scrollHeight});
           $('.contents__form__submit').removeAttr('disabled');
           $('.new_message')[0].reset();
         })
